@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;  
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  /* background: var(--background); */
+  background-color: white;
+  /* font-family: Arial, Helvetica, sans-serif;     */
+  font-family: var(--font-sarabun), var(--font-geist-sans), var(--font-geist-mono), Arial, Helvetica, sans-serif;    
+}
+
+.tabpanel {
+  display: none;
+}
+
+/* แสดง panel ที่เลือก */
+input[type="radio"]:checked + label + .tabpanel {
+  display: block;
+}

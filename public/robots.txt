@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /admin
+Disallow: /dashboard
+
+# Host
+Host: https://accnew.com
+
+# Sitemaps
+Sitemap: https://accnew.com/sitemap.xml
