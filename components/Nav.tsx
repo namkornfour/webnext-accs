@@ -87,7 +87,7 @@ function NavPage() {
             <Image
               src={logo}
               // src="/images/logo.jpg"
-              alt="โปรแกรมบัญชี"
+              alt="โปรแกรมบัญชีฟรี"
               // width={100}
               // height={80}
               priority={true}
