@@ -37,7 +37,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  // output: "export", // ใช้ static export ตอน build (comment ตอน dev uncomment ตอน build)
+  // output: "export", // ใช้ static website export ตอน build (comment ตอน dev uncomment ตอน build)
 };
 
 export default nextConfig;
