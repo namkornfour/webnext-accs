@@ -18,7 +18,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/tee/accnew
+            cd /home/tee/webnext-accs
             git pull origin main
             docker compose pull
             docker compose up -d --build
