@@ -18,7 +18,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /path/to/your/accnew/project
+            cd /home/tee/accnew
             git pull origin main
             docker compose pull
             docker compose up -d --build
