@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
   // },
   trailingSlash: true,
   images: {
-    //unoptimized: true, // ปิดโหมด Image Optimization เนื่องจากใช้ `output: 'export' ตอน build` (comment ตอน dev uncomment ตอน build)
+    unoptimized: true, // unoptimized: true, คือการสั่งให้ next ปิดการปรับแต่งรูปอัตโนมัติ เนื่องจากใช้ `output: 'export' ตอน build` (comment ตอน dev uncomment ตอน build)
     remotePatterns: [
       {
         protocol: "https",
@@ -37,7 +37,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  output: "export", // ใช้ static website export ตอน build (comment ตอน dev uncomment ตอน build)
+  // output: "export", // ใช้ static website export ตอน build (comment ตอน dev uncomment ตอน build)
 };
 
 export default nextConfig;
