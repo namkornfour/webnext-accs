@@ -14,13 +14,21 @@ jobs:
 
       - name: Setup SSH Connection & Deploy
         uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.VPS_PORT }}
-          script: |
-            cd /home/tee/webnext-accs
-            git pull origin main
-            docker compose pull
-            docker compose up -d --build
+        
+        # with:
+        #   host: ${{ secrets.SERVER_IP }}
+        #   username: ${{ secrets.SERVER_USER }}
+        #   key: ${{ secrets.SSH_PRIVATE_KEY }}
+        #   port: ${{ secrets.VPS_PORT }}
+        #   script: |
+        #     cd /home/tee/webnext-accs
+        #     git pull origin main
+        #     docker compose pull
+        #     docker compose up -d --build
+
+      -  name: Run deploy commands
+         run: |
+          cd /home/tee/webnext-accs
+          git pull origin main
+          docker compose down
+          docker compose up -d --build
