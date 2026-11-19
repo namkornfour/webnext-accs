@@ -1,4 +1,5 @@
-FROM nginx:alpine
+#FROM nginx:alpine 
+FROM node:18-alpine AS builder
 
 # กำหนด Directory สำหรับเว็บไซต์
 WORKDIR /usr/share/nginx/html
