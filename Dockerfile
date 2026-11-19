@@ -7,7 +7,8 @@ WORKDIR /usr/share/nginx/html
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # คัดลอกเว็บไซต์ Static
-COPY out/ /usr/share/nginx/html/
+#COPY out/ /usr/share/nginx/html/
+COPY --from=builder /app/out /usr/share/nginx/html
 
 # เปิด Port 80
 EXPOSE 80
